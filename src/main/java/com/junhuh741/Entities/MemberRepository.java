@@ -1,4 +1,4 @@
-package com.junhuh741;
+package com.junhuh741.Entities;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.data.jpa.repository.JpaRepository;

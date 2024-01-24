@@ -1,4 +1,4 @@
-package com.junhuh741;
+package com.junhuh741.Entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,18 +10,24 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PUBLIC)
+@NoArgsConstructor(access =AccessLevel.PUBLIC)
 @AllArgsConstructor
 @Getter
 @Entity
-public class Member {
+public class Category {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", updatable= false)
-	private Long id; // DB 테이블의 'id' 컬럼과 매칭
+	@Column(name ="cate_id", updatable = false)
+	private Long cate_id;
 	
-	@Column(name = "name", nullable = false)
-	private String name; // DB 테이블의 'name' 컬럼과 매칭
+	@Column(name ="group_nm")
+	private String group_nm;
 	
+	@Column(name ="cate_nm")
+	private String cate_nm;
+
+	@Column(name ="cate_cd")
+	private String cate_cd;
 	
 }
