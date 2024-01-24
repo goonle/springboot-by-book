@@ -1,15 +1,17 @@
-package com.junhuh741;
+package com.junhuh741.model.dashboard;
+
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.junhuh741.Entities.Member;
-import com.junhuh741.Entities.MemberRepository;
+import com.junhuh741.domain.entity.Member;
+import com.junhuh741.repository.MemberRepository;
 
 @Service
-public class TestService {
+public class DashboardService {
+
 	@Autowired
 	MemberRepository memberRepository;
 	
@@ -22,4 +24,3 @@ public class TestService {
 	}
 	
 }
-

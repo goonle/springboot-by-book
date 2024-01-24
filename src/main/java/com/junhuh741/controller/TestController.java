@@ -1,4 +1,4 @@
-package com.junhuh741;
+package com.junhuh741.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.junhuh741.Entities.Member;
+import com.junhuh741.domain.entity.Member;
+import com.junhuh741.service.TestService;
 
 @RestController
 public class TestController {

@@ -1,6 +1,4 @@
-package com.junhuh741.Entities;
-
-import java.sql.Timestamp;
+package com.junhuh741.domain.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,18 +14,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Getter
 @Entity
-public class Status {
-
+public class Member {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "status_id", updatable = false)
-	private int status_id;
+	@Column(name = "user_id", updatable= false)
+	private Long user_id; // DB 테이블의 'id' 컬럼과 매칭
 	
-	@Column(name = "upd_dt", updatable = false)
-	private Timestamp upd_dt;
+	@Column(name = "name", nullable = false)
+	private String name; // DB 테이블의 'name' 컬럼과 매칭
 	
-	@Column(name = "exp_dt", updatable = false)
-	private Timestamp exp_dt;
-	
-	
+	@Column(name = "status")
+	private String status;
 }

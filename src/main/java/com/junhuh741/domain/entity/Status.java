@@ -1,4 +1,6 @@
-package com.junhuh741.Entities;
+package com.junhuh741.domain.entity;
+
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,24 +12,22 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access =AccessLevel.PUBLIC)
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 @AllArgsConstructor
 @Getter
 @Entity
-public class Category {
-	
+public class Status {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name ="cate_id", updatable = false)
-	private Long cate_id;
+	@Column(name = "status_id", updatable = false)
+	private int status_id;
 	
-	@Column(name ="group_nm")
-	private String group_nm;
+	@Column(name = "upd_dt", updatable = false)
+	private Timestamp upd_dt;
 	
-	@Column(name ="cate_nm")
-	private String cate_nm;
-
-	@Column(name ="cate_cd")
-	private String cate_cd;
+	@Column(name = "exp_dt", updatable = false)
+	private Timestamp exp_dt;
+	
 	
 }

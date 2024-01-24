@@ -1,4 +1,4 @@
-package com.junhuh741.Entities;
+package com.junhuh741.domain.entity;
 
 import java.sql.Timestamp;
 
